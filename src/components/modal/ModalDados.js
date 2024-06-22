@@ -1,17 +1,16 @@
 import React from "react"
 import {View, Text, StyleSheet} from 'react-native'
-import { useRoute } from "@react-navigation/native"
 
-export function ModalDados(){
+export default function ModalDados(){
     const route = useRoute()
     const {alunoNovo} = route.params
 
     return(
-        <View>
-            <Text>Dados do Aluno</Text>
-            <Text>Matrícula: {alunoNovo.matricula}</Text>
-            <Text>Nome: {alunoNovo.nome}</Text>
-            <Text>Média: {alunoNovo.media}</Text>
+        <View style={styles.container}>
+            <Text style={styles.text}>Dados do Aluno</Text>
+            <Text style={styles.text}>Matrícula: {alunoNovo.matricula}</Text>
+            <Text style={styles.text}>Nome: {alunoNovo.nome}</Text>
+            <Text style={styles.text}>Média: {alunoNovo.media}</Text>
         </View>
     )
 }

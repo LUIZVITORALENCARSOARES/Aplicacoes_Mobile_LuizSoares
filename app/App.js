@@ -56,7 +56,6 @@ const styles = StyleSheet.create({
         marginBottom: 50,
         fontSize: 30,
         fontWeight: 'bold',
-        alignItems: 'center',
         color: 'blue'
     },
 
