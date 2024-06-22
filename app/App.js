@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, {useState} from "react";
 import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native'
-import { useNavigation } from '@react-navigation/native'
+import {useNavigation} from '@react-navigation/native'
 
 export default function App(){
     const [matricula, setMatricula] = useState('')
@@ -11,33 +11,32 @@ export default function App(){
 
     function saveData(){
         const alunoNovo = {matricula, nome, media}
-        navigation.navigate('ModalDados', {alunoNovo})
+        navigation.navigate('ModalDdos', {alunoNovo})
     }
 
     return(
-        <View style={styles.container}>
-            <Text style={styles.title}>Dados do Aluno</Text>
+        <View style={StyleSheet.container}>
+            <Text style={StyleSheet.title}>Dados do Aluno</Text>
 
-            <TextInput style={styles.textinput}
-                keyboardType='numeric'
-                placeholder='Matrícula'
+            <TextInput style={styles.textInput}
+                keyboardType="numeric"
+                placeholder="Matrícula"
                 value={matricula}
                 onChangeText={text => setMatricula(text)}
             />
-            <TextInput style={styles.textinput}
-                placeholder='Nome Completo'
+
+            <TextInput style={styles.textInput}
+                placeholder="Nome Completo"
                 value={nome}
-                onChangeText={text => setNome(text)}
+                onChangeText={text => setNome(text)}/>
 
-            />
-            <TextInput style={styles.textinput}
-                keyboardType='numeric'
-                placeholder='Média'
+            <TextInput style={styles.textInput}
+                keyboardType="numeric"
+                placeholder="Média"
                 value={media}
-                onChangeText={text => setMedia(text)}
-            />
+                onChangeText={text => setMedia(text)}/>
 
-            <TouchableOpacity style={styles.button} onPress={saveData}>
+            <TouchableOpacity style={styles.button}>
                 <Text style={styles.buttonText}>Enviar</Text>
             </TouchableOpacity>
         </View>
@@ -53,13 +52,12 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        marginBottom: 50,
-        fontSize: 30,
-        fontWeight: 'bold',
+        marginBottom: 50, fontSize: 30,
+        fontWeight:'bold',
         color: 'blue'
     },
 
-    textinput: {
+    textInput: {
         backgroundColor: 'yellow',
         padding: 30,
         marginBottom: 20,

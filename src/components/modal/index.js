@@ -1,5 +1,6 @@
-import React from "react"
+import React from "react";
 import {View, Text, StyleSheet} from 'react-native'
+import { useRoute } from "@react-navigation/native";
 
 export default function ModalDados(){
     const route = useRoute()
